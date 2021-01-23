@@ -15,15 +15,13 @@ export default class AddListModal extends React.Component {
     createTodo = () => {
         const {name, color} = this.state;
 
-        tempData.push({
-            name,
-            color,
-            todos: []
-        })
+        const list = {name, color}
+
+        this.props.addList(list);
 
         this.setState({name: ""});
         this.props.closeModal();
-    }
+    };
 
     renderColors() {
         return this.backgroundColors.map(color => {
@@ -34,7 +32,7 @@ export default class AddListModal extends React.Component {
                     onPress={() => this.setState({color})}/>
             )
         })
-    }
+    };
 
     render() {
         return (
@@ -66,7 +64,7 @@ export default class AddListModal extends React.Component {
                 </View>
             </KeyboardAvoidingView>
         )
-    }
+    };
 }
 
 const styles = StyleSheet.create({

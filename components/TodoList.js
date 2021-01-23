@@ -6,10 +6,11 @@ import TodoModal from "./TodoModal";
 export default class TodoList extends React.Component {
     state = {
         showListVisible: false
-    }
+    };
+
     toggleListModal() {
         this.setState({showListVisible: !this.state.showListVisible})
-    }
+    };
 
     render() {
         const list = this.props.list
@@ -23,7 +24,11 @@ export default class TodoList extends React.Component {
                     visible={this.state.showListVisible}
                     onRequestClose={() => this.toggleListModal()}
                 >
-                    <TodoModal list={list} closeModal={() => this.toggleListModal()}/>
+                    <TodoModal
+                        list={list}
+                        closeModal={() => this.toggleListModal()}
+                        updateList={this.props.updateList}
+                    />
                 </Modal>
                 <TouchableOpacity
                     style={[styles.listContainer, {backgroundColor: list.color}]}
@@ -46,7 +51,7 @@ export default class TodoList extends React.Component {
                 </TouchableOpacity>
             </View>
         )
-    }
+    };
 }
 
 const styles = StyleSheet.create({
