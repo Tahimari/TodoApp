@@ -43,22 +43,22 @@ export default class App extends React.Component {
     }
 
     addList = list => {
-        this.setState({lists: [...this.state.lists, {...list, id: this.state.lists.length + 1, todos: []}]});
+        firebase.addList({
+            name: list.name,
+            color: list.color,
+            todos: []
+        });
     };
 
     updateList = list => {
-        this.setState({
-            lists: this.state.lists.map(item => {
-                return item.id === list.id ? list : item;
-            })
-        })
+        firebase.updateList(list);
     };
 
     render() {
         if (this.state.loading) {
             return (
                 <View style={styles.container}>
-                    <ActivityIndicator size="large" color={colors.blue} />
+                    <ActivityIndicator size="large" color={colors.blue}/>
                 </View>
             )
         }
