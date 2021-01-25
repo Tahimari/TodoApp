@@ -41,7 +41,7 @@ export default class AddListModal extends React.Component {
                 </TouchableOpacity>
                 <View style={{alignSelf: "stretch", marginHorizontal: 32}}>
 
-                    <Text style={styles.title}>Create Todo List</Text>
+                    <Text style={styles.title}>Stwórz Listę</Text>
 
                     <TextInput
                         style={styles.input}

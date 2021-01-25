@@ -41,11 +41,11 @@ export default class TodoList extends React.Component {
                     <View>
                         <View style={{alignItems: "center"}}>
                             <Text style={styles.count}>{remainingCount}</Text>
-                            <Text style={styles.subtitle}>Remaining</Text>
+                            <Text style={styles.subtitle}>Pozostałe</Text>
                         </View>
                         <View style={{alignItems: "center"}}>
                             <Text style={styles.count}>{completedCount}</Text>
-                            <Text style={styles.subtitle}>Completed</Text>
+                            <Text style={styles.subtitle}>Ukończone</Text>
                         </View>
                     </View>
                 </TouchableOpacity>

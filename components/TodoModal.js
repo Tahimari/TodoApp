@@ -90,7 +90,7 @@ export default class TodoModal extends React.Component {
             <TouchableOpacity onPress={() => this.deleteTodo(index)}>
                 <Animated.View style={[styles.deleteButton, {opacity: opacity}]}>
                     <Animated.Text style={{color: colors.white, fontWeight: "800", transform: [{scale}]}}>
-                        Delete
+                        Usuń
                     </Animated.Text>
                 </Animated.View>
             </TouchableOpacity>
@@ -117,7 +117,7 @@ export default class TodoModal extends React.Component {
                         <View>
                             <Text style={styles.title}>{list.name}</Text>
                             <Text style={styles.taskCount}>
-                                {completedCount} of {taskCount} tasks
+                                {completedCount} z {taskCount} zadań
                             </Text>
                         </View>
                     </View>

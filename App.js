@@ -76,7 +76,7 @@ export default class App extends React.Component {
                 <View style={{flexDirection: "row"}}>
                     <View style={styles.divider}/>
                     <Text style={styles.title}>
-                        Todo <Text style={{fontWeight: "300", color: colors.blue}}>Lists</Text>
+                        Todo <Text style={{fontWeight: "300", color: colors.blue}}>Lista</Text>
                     </Text>
                     <View style={styles.divider}/>
                 </View>
@@ -86,7 +86,7 @@ export default class App extends React.Component {
                         <AntDesign name="plus" size={16} color={colors.blue}></AntDesign>
                     </TouchableOpacity>
 
-                    <Text style={styles.add}>Add List</Text>
+                    <Text style={styles.add}>Dodaj Listę</Text>
                 </View>
 
                 <View style={{height: 275, paddingLeft: 32}}>
