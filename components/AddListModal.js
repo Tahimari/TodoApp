@@ -57,7 +57,7 @@ export default class AddListModal extends React.Component {
                         style={[styles.create, {backgroundColor: this.state.color}]}
                         onPress={() => this.createTodo()}
                     >
-                        <Text style={{color: colors.white, fontWeight: "600"}}>Create</Text>
+                        <Text style={{color: colors.white, fontWeight: "600"}}>Dodaj</Text>
                     </TouchableOpacity>
 
                 </View>
