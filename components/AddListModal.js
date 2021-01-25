@@ -16,10 +16,11 @@ export default class AddListModal extends React.Component {
 
         const list = {name, color}
 
-        this.props.addList(list);
-
-        this.setState({name: ""});
-        this.props.closeModal();
+        if (list.name != '') {
+            this.props.addList(list);
+            this.setState({name: ""});
+            this.props.closeModal();
+        }
     };
 
     renderColors() {
